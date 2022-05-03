@@ -1,10 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sign Up</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./signUp.js" defer></script>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo-box">
+        <img src="./images/odin-lined.png" alt="odin logo" id="logo" />Odin
+      </div>
+      <div id="attribution">
+        Photo by <a href="https://unsplash.com/@dmey503">Dan Meyers</a> on
+        <a href="https://unsplash.com/photos/0AgtPoAARtE"> Unsplash</a>
+      </div>
+    </div>
+    <div id="main">
+      <div id="call-out">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help your realize your deepest dreams. Sign up
+          <em>now</em> to get get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <h1>Let's do this!</h1>
+      <form action="#" method="post" name="sign-up" id="sign-up">
+        <div>
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            required
+            inputmode="latin-name"
+          />
+        </div>
+        <div>
+          <label for="lastName">Last name</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            required
+            inputmode="latin-name"
+          />
+        </div>
+        <div>
+          <label for="mail">Email</label>
+          <input
+            type="email"
+            name="mail"
+            id="mail"
+            required
+            inputmode="email"
+          />
+        </div>
+        <div>
+          <label for="telephoneNumber">Phone Number</label>
+          <input
+            type="tel"
+            name="telephoneNumber"
+            id="telephoneNumber"
+            pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$"
+            inputmode="tel"
+          />
+        </div>
+        <div>
+          <label for="pass">Password</label>
+          <input
+            type="password"
+            name="pass"
+            id="pass"
+            required
+            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+          />
+          <div id="passwordMismatch"></div>
+        </div>
+        <div>
+          <label for="confirmPass">Confirm Password</label>
+          <input
+            type="password"
+            name="confirmPass"
+            id="confirmPass"
+            required
+            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+          />
+        </div>
+      </form>
+      <div id="footer">
+        <button type="submit" form="sign-up">Create Account</button>
+        <p>Already have an account? <a href="#">Log in</a></p>
+      </div>
+    </div>
+  </body>
 </html>

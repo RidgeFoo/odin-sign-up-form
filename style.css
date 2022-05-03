@@ -1,0 +1,159 @@
+:root {
+  --font-family: "Quicksand", sans-serif;
+  --button-color: #596d48;
+  --padding-left: 5%;
+  --padding-right: 15%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.sidebar {
+  background: url(./images/vineyard.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main {
+  flex: 2;
+}
+
+a {
+  text-decoration: underline;
+  color: white;
+}
+
+.logo-box {
+  background-color: rgba(85, 83, 83, 0.237);
+  font-size: 6vw;
+  font-weight: 700;
+  margin-top: 30%;
+  top: 15%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  width: 30%;
+}
+
+#attribution {
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+
+form label {
+  text-transform: uppercase;
+}
+
+button {
+  background-color: var(--button-color);
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--button-color);
+  font-family: var(--font-family);
+  padding: 8px 32px;
+  margin-bottom: 12px;
+  margin-top: 24px;
+  margin-left: var(--padding-left);
+  box-shadow: 0px 6px 12px 3px #eeedf2;
+  color: white;
+}
+
+button:hover {
+  box-shadow: 0 0 6px var(--button-color);
+}
+
+#call-out {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  background-color: #f7f7f7;
+}
+
+#footer > p {
+  padding-left: var(--padding-left);
+  padding-right: var(--padding-right);
+}
+
+#footer a {
+  color: green;
+  text-decoration: none;
+}
+
+#call-out p {
+  padding: 0 var(--padding-right) 0 var(--padding-left);
+  font-size: 18px;
+}
+
+#call-out p:first-child {
+  margin-bottom: 32px;
+  margin-top: 10vh;
+}
+
+#call-out p:last-child {
+  margin-bottom: 24px;
+}
+
+h1 {
+  padding-left: var(--padding-left);
+}
+
+#sign-up {
+  padding: 10px var(--padding-right) 32px var(--padding-left);
+  display: flex;
+  flex-flow: row wrap;
+  gap: 24px 60px;
+  box-shadow: 0 8px 6px -8px rgb(170, 169, 169);
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+input {
+  width: 200px;
+  height: 2em;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding-left: 8px;
+}
+
+input:focus-visible {
+  outline: solid rgb(161, 191, 225);
+}
+
+input:focus:invalid,
+.error {
+  outline: solid red;
+  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg")
+    no-repeat 95% 50%;
+}
+
+input:focus:valid {
+  outline: solid var(--button-color);
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg")
+    no-repeat 95% 50%;
+}
+
+#passwordMismatch {
+  padding-top: 2px;
+  font-size: 8px;
+  color: red;
+}
